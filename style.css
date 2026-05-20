@@ -892,7 +892,7 @@ body{
     }
 }
 .secao6-2{
-    height: 50dvh;
+    height: 70dvh;
     .tituloSec6-2{
         h1{
             font-size: clamp(2em, 2.5em, 2.8em);
