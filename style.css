@@ -379,13 +379,13 @@ section{
         h1{
             text-align: center;
             font-family: paragrafos;
-            font-size: 6em;
+            font-size: clamp(5.7em, 6em, 6.3em);
             color: #ffffff;
         }
         p{
             text-align: center;
             font-family: paragrafos;
-            font-size: 2em;
+            font-size: clamp(1.5em, 2em, 2.5em);
             color: #ffffff;
         }
     }
@@ -408,7 +408,7 @@ section{
     h1{
         text-align: center;
         color: #ededed;
-        font-size: 3em;
+        font-size: clamp(2.8em, 3em, 3.5m);
         font-family: paragrafos;
     }
     }
@@ -477,7 +477,7 @@ section{
         text-align: center;
         color: #ededed;
         font-family: paragrafos;
-        font-size: 6em;
+        font-size: clamp(5em, 6em, 6.5em);
     }
     .nossoProjeto{
         width: fit-content;
@@ -491,7 +491,7 @@ section{
         color: #ededed;
         text-align: center;
         font-family: subtitulos;
-        font-size: 1.8em;
+        font-size: clamp(1.5em, 1.8em, 2em);
         margin-left: 12%;
         margin-right: 12%;
     }
@@ -506,7 +506,7 @@ section{
     height: 100dvh;
     display: flex;
     position: relative;
-    background-image: url(img/backGeral.png);
+    background-image: url(img/fotoEquipe.jpg);
     background-size: cover;
     background-position: center;
     .divEquipe{
@@ -516,14 +516,14 @@ section{
         text-align: center;
         color: #ededed;
         font-family: paragrafos;
-        font-size: 5em;
+        font-size: clamp(4em, 5em, 5.5em);
     }
     p{
         padding-top: 1%;
         text-align: center;
         color: #ededed;
         font-family: paragrafos;
-        font-size: 1.2em; 
+        font-size: clamp(1em, 1.2em, 1.5em);
     }
 }
     .nomes{
@@ -532,16 +532,18 @@ section{
         flex-direction: column;
         height: 100%;
         padding: 5%;
-        align-items: center;
+        align-items: left;
+        justify-content: end;
 
         p{
             width: fit-content;
             padding-top: .5%;
-            text-align: center;
+            text-align: end;
             color: #ededed;
-            font-size: 3em;
+            font-size: clamp(1.5em, 2.5em, 3em);
             letter-spacing: 10px;
             font-family: titulos-2;
+            text-shadow: 0 0 .1em black;
         }
     }
 }
@@ -883,6 +885,17 @@ body{
         }
 
 
+    }
+}
+.secao6-2{
+    height: 50dvh;
+    .tituloSec6-2{
+        h1{
+            font-size: clamp(2em, 2.5em, 2.8em);
+        }
+        p{
+            font-size: clamp(.5em, .7em, .9em);
+        }
     }
 }
 .secao7{

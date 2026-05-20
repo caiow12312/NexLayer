@@ -8,7 +8,7 @@ console.log(listaImagens)
 botaoProximo.onclick = function passarSlider(){
     document.querySelector("img.ativo").classList.remove("ativo")
     
-    if(contador < 4){
+    if(contador < 7){
     contador = contador + 1 
     }else{
         contador = 0
@@ -22,7 +22,7 @@ botaoAnterior.onclick = function voltarSlider(){
     if(contador > 0){
     contador = contador - 1
     }else{
-        contador = 4
+        contador = 7
     }
 
     listaImagens[contador].classList.add("ativo")
