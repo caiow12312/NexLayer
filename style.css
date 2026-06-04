@@ -24,7 +24,6 @@ html{
 }
 body{
     cursor: none;
-    background-color: rgb(194, 188, 188);
 }
 .cursor{
       position: fixed;
@@ -57,7 +56,7 @@ section{
     h1{
         font-family: paragrafos;
         letter-spacing: -2px;
-        color: rgb(255, 255, 255);
+        color: rgb(14, 14, 14);
         font-size: clamp(.5em, 1em + 4vw + 4vh, 10.5em);
         }
 }
@@ -69,27 +68,29 @@ section{
         z-index: 1;
         justify-content: left;
         font-family: subtitulos;
-        color: rgb(255, 255, 255);
+        color: rgb(24, 24, 24);
         font-size: clamp(0.5em, 0.5em + 1vw + 1vh, 3em);
     }
     .texto::after{
-        border-left: #ededed solid 3px;
+        border-left: #010101 solid 3px;
         content: "";
         animation: piscar .7s infinite;
     }
 }
 .secaoDocumentacao{
-    height: 100dvh;
+    height: 105dvh;
     .divDocNexlayer{
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     h1{
+        transform: translateY(1em);
         font-family: subtitulos;
         font-size: 1em;    
     }
     p{
+        padding: .5em 0 0 0;
         font-family: paragrafos;
         font-size: 2.1em;
     }
@@ -171,21 +172,56 @@ section{
     }
     }
     }
+.linkvisivel{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+.linkvisivel:first-child{
+    transition: all 1.5s;
+}
+.linkvisivel:nth-child(2){
+    transition: all 1s;
+}
+.linkvisivel:nth-child(3){
+    transition: all .5s;
+}
+.linknaovisivel:first-child{
+    opacity: 0;
+    filter: blur(.6em);
+    transform: translateY(30dvh);
+}
+.linknaovisivel:nth-child(2){
+    opacity: 0;
+    filter: blur(.6em);
+    transition: all 2s;
+    transform: translateY(20dvh);
+}
+.linknaovisivel:nth-child(3){
+    opacity: 0;
+    filter: blur(.6em);
+    transition: all 1s;
+    transform: translateY(10dvh);
+}
 }
 .secaoCriacao{
-    height:100dvh;
+    margin-top: 1em;
+    background-color: rgb(82, 82, 82);
+    height: 90dvh;
     .tituloCricao{
     display: flex;
     justify-content: center;
     h1{
+        transform: translateY(.45em);
         text-align: center;
         font-size: 4em;
+        color: rgb(255, 255, 255);
         font-family: paragrafos;
     }
     }
     .div-Video{
     display: flex;
-    margin-top: 12px;
+    margin-top: 50px;
     align-items: center;
     justify-content: center;
     video{
@@ -196,6 +232,182 @@ section{
     }
     }
 }
+.secaoHardware{
+    height: 80dvh;
+    .tituloSecHardware{
+        display: flex;
+        justify-content: center;
+        h1{
+            font-family: paragrafos;
+            font-size: 9em;
+        }
+    }
+    .componentesHardware{
+        width: 100%;
+        .titulosComponentes{
+                text-align: center;
+                font-family: paragrafos;
+                font-size: 2em;
+        }
+        p{
+            font-family: subtitulos;
+            text-align: center;
+            font-size: 2em;
+        }
+    }
+}
+.secaoSoftware{
+    height: 110dvh;
+    position: relative;
+    .tituloSecSoftware{
+        display: flex;
+        justify-content: center;
+        h1{
+            font-family: paragrafos;
+            font-size: 9em;
+        }
+    }
+    .conteudoSoftware{
+        display: flex;
+        justify-content: center;
+        margin-top: 1.4em;
+        align-items: center;
+        p{
+            font-family: subtitulos;
+            text-align: center;
+            font-size: 2em;
+        }
+    }
+    .imgSoftware{
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+    .cardMarlin{
+        border-radius: 15px;
+        height: 40dvh;
+        margin-top: 2em;
+        box-shadow: 7px 7px 1em rgba(0, 0, 0, 0.6);
+        object-fit: cover;
+        overflow: hidden;
+        transition: all .4s ease-in-out;
+        box-shadow: 0 0 2em rgba(0, 0, 0, 1);
+    }
+    }
+}
+.secaoEquipe{
+    height: 100dvh;
+    display: flex;
+    position: relative;
+    background-image: url(img/fotoEquipe.jpg);
+    background-size: cover;
+    background-position: center;
+    .divEquipe{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .texto2{
+        padding-top: 3%;
+        text-align: center; 
+        height: 17dvh;
+        color: #ededed;
+        font-family: paragrafos;
+        font-size: clamp(4em, 5em, 5.5em);
+        text-shadow: 0 0 .5em black;
+    }
+    .texto2::after{
+    border-left: #ededed solid 3px;
+    content: "";
+    animation: piscar .7s infinite;
+    }
+}
+
+    .divEquipe2{
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    p{
+        padding-top: 1%;
+        text-align: center;
+        color: #ededed;
+        font-family: paragrafos;
+        font-size: clamp(1em, 1.2em, 1.5em);
+        text-shadow: 0 0 .5em black;
+    }
+}
+    .nomes{
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 5%;
+        align-items: left;
+        justify-content: end;
+
+        p{
+            width: fit-content;
+            padding-top: .5%;
+            text-align: end;
+            color: #ededed;
+            font-size: clamp(1.5em, 2.5em, 3em);
+            letter-spacing: 10px;
+            font-family: titulos-2;
+            text-shadow: 0 0 .3em black;
+        }
+}
+.nomevisivel{
+    opacity: 1;
+    transition: all 1s;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.nomenaovisivel{
+    opacity: 0;
+    filter: blur(.6em);
+    transition: all 1s;
+    transform: translateX(-10dvw);
+}
+}
+
+.secaoSoftware::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0),rgb(0, 0, 0));
+}
+
+.secaoEquipe::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(black,rgba(0, 0, 0, 0));
+}
+
+.secaoCreditos{
+    height: 10dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(19, 19, 19);
+    .divCreditos{
+        p{  
+            text-align: center;
+            font-family: subtitulos;
+            color: #ededed;
+            font-size: 1.5rem;
+        }
+    }
+}
+
 
 
 @keyframes piscar{
@@ -217,8 +429,6 @@ section{
     height: 0;
 }
 
-
-
 .secaoIncial{
     height: calc(50dvh + 1em);
     .tituloSecao1{
@@ -232,17 +442,8 @@ section{
     }
 }
 
-
-
-
-
-
-
-
-
-
 .secaoDocumentacao{
-    height: max-content;
+    height: calc-size(max-content, size + 2rem);
     .divDocImg{
     .linkDocs{
         flex-direction: column;
@@ -260,15 +461,9 @@ section{
     }
 }
 
-
-
-
-
-
-
 .secaoCriacao{
     margin-top: 15%;
-    height: 35rem;
+    height: calc-size(max-content, size + 4rem);
     .tituloCricao{
     h1{
         font-size: 2em;
@@ -279,6 +474,85 @@ section{
     video{
         width: 80%;
     }
+    }
+}
+
+.secaoHardware{
+    height: calc-size(max-content, size + 2rem);
+    .tituloSecHardware{
+        h1{
+            font-size: 300%;
+        }
+    }
+    .componentesHardware{
+        width: 100%;
+        .titulosComponentes{
+                text-align: center;
+                font-size: 1.2em;
+        }
+        p{
+            margin: .5em;
+            font-size: 1.2em;
+        }
+    }
+}
+
+.secaoSoftware{
+    height: calc-size(max-content, size + 2rem);
+    .tituloSecSoftware{
+        h1{
+            font-size: 300%;
+        }
+    }
+    .conteudoSoftware{
+        margin-top: 1.4em;
+        p{
+            font-size: 1.2em;
+            margin: .5em;
+        }
+    }
+    .imgSoftware{
+    .cardMarlin{
+        border-radius: 15px;
+        height: 25dvh;
+        margin-top: .4em;
+    }
+    }
+}
+
+.secaoEquipe{
+    background-size: 80dvh;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: max-content;
+    .divEquipe{
+    .texto2{
+        font-size: 3.4em;
+    }
+}
+    .divEquipe2{
+    p{
+        transform: translateY(5em);
+        text-align: start;
+        margin: 1em;
+        font-size: .8rem;
+    }
+    }
+
+    .nomes{
+        margin-top: 3rem;
+        p{
+            text-align: start;
+            font-size: .7rem;
+        }
+    }
+}
+.secaoCreditos{
+    height: max-content;
+    .divCreditos{
+        p{  
+            font-size: 1rem;
+        }
     }
 }
 
