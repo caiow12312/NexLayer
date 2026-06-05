@@ -207,7 +207,7 @@ section{
 .secaoCriacao{
     margin-top: 1em;
     background-color: rgb(82, 82, 82);
-    height: 90dvh;
+    height: 100dvh;
     .tituloCricao{
     display: flex;
     justify-content: center;
@@ -225,8 +225,8 @@ section{
     align-items: center;
     justify-content: center;
     iframe{
-        width: 840px;
-        height: 472px;
+        width: 60dvw;
+        height: 33.75dvw;
         object-fit: cover;
         box-shadow: 7px 7px 1em rgba(0, 0, 0, 0.6);
         border-radius: 5px;
@@ -478,8 +478,8 @@ body{
     .div-Video{
     position: relative;
     iframe{
-        width: 80%;
-        height: 45%;
+        width: 80dvw;
+        height: 45dvw;
     }
     }
 }
