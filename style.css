@@ -204,6 +204,65 @@ section{
     transform: translateY(10dvh);
 }
 }
+.secaoFilamentos{
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    .tituloSecFilamentos{
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        h1{
+            font-family: paragrafos;
+            font-size: 4em;
+        }
+        p{
+            font-family: subtitulos;
+            font-size: 1.8em;
+            margin: 0 1em 0;
+            text-align: center;
+        }
+        a{
+            color: rgb(3, 3, 174);
+            text-decoration: underline;
+        }
+    }
+    .fotosFilamentos{
+    align-items: center;
+    display: flex;
+    height: 100%;
+    gap: 4em;
+        img{
+            height: 50dvh;
+            filter: brightness(.7);
+            overflow: hidden;
+            background: linear-gradient(45deg, rgb(100, 100, 100), white);
+            padding: 1em;
+            box-shadow: 0 0 4em rgba(0, 0, 0, 0.6);
+            object-fit: cover;
+            border-radius: 5px;
+            transition: all .4s ease-in-out;
+            &:hover{
+                height: 55dvh;
+            }
+        }
+    }
+.card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    h1{
+        font-family: paragrafos;
+        font-size: 3em;
+    }
+    p{
+        font-family: subtitulos;
+        font-size: 1.5em;
+}
+}
+}
 .secaoCriacao{
     margin-top: 1em;
     background-color: rgb(82, 82, 82);
@@ -393,6 +452,16 @@ section{
     background: linear-gradient(black,rgba(0, 0, 0, 0));
 }
 
+.secaoEquipe::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0),rgb(19, 19, 19));
+}
+
 .secaoCreditos{
     height: 10dvh;
     display: flex;
@@ -484,6 +553,46 @@ body{
     }
 }
 
+.secaoFilamentos{
+    height: calc-size(max-content, size + 1rem);
+    .tituloSecFilamentos{
+        h1{
+            font-size: 7dvh;
+        }
+        p{
+            font-size: 2.5dvh;
+            margin: 0 .1em 0;
+        }
+    }
+    .fotosFilamentos{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 1.3em;
+    gap: 4em;
+        img{
+            height: 40dvh;
+            padding: 1em;
+            box-shadow: 7px 7px 1em rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+            &:hover{
+                height: 40dvh;
+            }
+        }
+    }
+.card{
+    flex-direction: column;
+    h1{
+        font-size: 3em;
+    }
+    p{
+        font-size: 1.2em;
+}
+}
+}
+
+
 .secaoHardware{
     height: calc-size(max-content, size + 2rem);
     .tituloSecHardware{
@@ -558,6 +667,7 @@ body{
     height: max-content;
     .divCreditos{
         p{  
+            margin: .9em;
             font-size: 1rem;
         }
     }
