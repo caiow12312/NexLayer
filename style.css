@@ -137,6 +137,7 @@ section{
     .link2{
         height: 80dvh;
         display: flex;
+        object-fit: cover;
         justify-content: center;
         align-items: center;
         &:hover{
@@ -277,22 +278,35 @@ section{
         color: rgb(255, 255, 255);
         font-family: paragrafos;
     }
-    }
+}
     .div-Video{
     display: flex;
-    flex-direction: column;
-    gap: 2em;
-    margin-top: 50px;
     align-items: center;
     justify-content: center;
+    gap: 1em;
+    margin: 50px;
     iframe{
-        width: 60dvw;
-        height: 33.75dvw;
+        width: 30dvw;
+        height: 16.875dvw;
         object-fit: cover;
         box-shadow: 7px 7px 1em rgba(0, 0, 0, 0.6);
         border-radius: 5px;
     }
+}
+    .div-Video2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin: 50px;
+    iframe{
+        width: 30dvw;
+        height: 16.875dvw;
+        object-fit: cover;
+        box-shadow: 7px 7px 1em rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
     }
+}
 }
 .secaoHardware{
     height: 80dvh;
@@ -547,12 +561,21 @@ body{
     }
     }
     .div-Video{
+    flex-direction: column;
     position: relative;
     iframe{
         width: 80dvw;
         height: 45dvw;
     }
     }
+    .div-Video2{
+    flex-direction: column;
+    position: relative;
+    iframe{
+        width: 80dvw;
+        height: 45dvw;
+    }
+}
 }
 
 .secaoFilamentos{
