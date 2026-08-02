@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+body{
+    background-color: rgb(20, 20, 20);
+}
+.secaoHV-1{
+    padding-top: 5em;
+    background-image: url(/img/hv-1/hv-1-inicial.png);
+    background-size: cover;
+    background-position: 0 -8em;
+    background-repeat: no-repeat;
+    height: 100dvh;
+    .tituloSecaoHV-1{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        h1{
+            transform: translate(.4em, 3em);
+            font-size: 5em;
+            color: rgb(255, 255, 255);
+            text-shadow: 0 0 .5em rgba(213, 213, 213, 0.315);
+            font-family: paragrafos;
+        }
+    }
+}
+.secaoHV-1-info{
+    height: calc-size(max-content, size + 10em);
+    display: flex;
+    .divInfoHV-1-1, .divInfoHV-1-2, .divInfoHV-1-3, .divInfoHV-1-4{
+        width: 50%;
+        height: 100%;
+        margin-left: 8em;
+        margin-top: 7em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h1{
+            font-size: 3em;
+            color: rgb(255, 255, 255);
+            font-family: paragrafos;
+            margin-bottom: .5em;
+        }
+        p{
+            text-align: left;
+            font-size: 1.5em;
+            color: rgb(255, 255, 255);
+            font-family: paragrafos;
+        }
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 900px){
+.secaoHV-1{
+    background-position: center -4em;
+    .tituloSecaoHV-1{
+        h1{
+            transform: translate(.3em, 2.5em);
+            font-size: 3.5em;
+        }
+    }
+}
+.secaoHV-1-info{
+    flex-direction: column;
+    .divInfoHV-1-1, .divInfoHV-1-2, .divInfoHV-1-3, .divInfoHV-1-4{
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 3em;
+        align-items: flex-start;
+        h1{
+            font-size: 2.2em;
+        }
+        p{
+            font-size: 1.2em;
+        }
+    }
+}
+}
+
+@media screen and (max-width: 450px){
+.secaoHV-1{
+    background-position: center -2em;
+    .tituloSecaoHV-1{
+        h1{
+            transform: translate(.2em, 2em);
+            font-size: 2em;
+        }
+    }
+}
+.secaoHV-1-info{
+    .divInfoHV-1-1, .divInfoHV-1-2, .divInfoHV-1-3, .divInfoHV-1-4{
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 2em;
+        h1{
+            font-size: 1.6em;
+        }
+        p{
+            font-size: 1em;
+        }
+    }
+}
+}
