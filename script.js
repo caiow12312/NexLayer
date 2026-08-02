@@ -42,22 +42,6 @@ digitar();
 //fim texto digitado secaoIncial
 
 
-const cursor = document.querySelector(".cursor");
-
-document.addEventListener("mousemove", (e) => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
-
-});
-
-//fim cursor personalizado
-
-
-$(document).ready(function() {
-    $(".mobile_btn").on('click', function() {
-      $(".mobile-menu").toggleClass('active');
-    });
-});
 
 const observadorNomes = new IntersectionObserver((entradas) => {
   entradas.forEach((entry) => {
